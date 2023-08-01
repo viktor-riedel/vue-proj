@@ -3,3 +3,8 @@ Dockerfile
 .git
 .gitignore
 README.md
+commands.sh
+Makefile
+.dockerignore
+.idea
+.DS_Store
