@@ -6,7 +6,7 @@ COPY package.json .
 
 COPY . .
 
-VOLUME ["./src:/app/src"]
+VOLUME ["./:/app/"]
 
 EXPOSE 3000
 

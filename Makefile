@@ -2,7 +2,7 @@ build:
 	docker build . -t udemy-test --no-cache
 
 start:
-	docker run --rm -d -t -i -p 3000:5173 -v ./src:/app/src -v ./package.json:/app/package.json --name frontend-development udemy-test
+	docker run --rm -d -t -i -p 3000:5173 -v ./:/app/ --name frontend-development udemy-test
 
 stop:
 	docker stop frontend-development
