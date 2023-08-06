@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  development:
+    container_name: test-app
+    image: node:lts-alpine
+    command: sh -c "npm i && npm run dev -- --host 0.0.0.0"
+    tty: true
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./:/app
+    working_dir: /app
