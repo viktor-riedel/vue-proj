@@ -12,30 +12,8 @@
 </template>
 
 <script setup>
-    import {ref, reactive, computed } from "vue";
     import {vAutoFocus} from "../directives/vAutoFocus";
+    import {useCounter} from "@/use/useCounter";
 
-    const val = ref(0)
-    const obj = reactive({
-        id: 0,
-        name: 'test'
-    })
-
-    const name = computed(() => {
-        return obj.id % 2 === 0 ? 'even' : 'odd';
-    })
-
-    const increase = () => {
-        val.value++;
-        obj.id++;
-    }
-
-    const decrease = () => {
-        val.value--;
-        obj.id--;
-    }
+    const {val, obj, name, increase, decrease} = useCounter()
 </script>
-
-<style scoped>
-
-</style>
