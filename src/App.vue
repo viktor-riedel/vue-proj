@@ -4,6 +4,8 @@
         <router-link :to="{name: 'Home'}">Home</router-link>
         <br>
         <router-link :to="{name: 'About'}">About</router-link>
+        <br>
+        <router-link :to="{name: 'Counter'}">Counter</router-link>
     </div>
     <router-view></router-view>
     <div class="user">
